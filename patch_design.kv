@@ -1,0 +1,179 @@
+#:import chex kivy.utils.get_color_from_hex
+#:import MDLabel kivymd.uix.label.MDLabel
+#:import ametin screens.ametin
+#:import guanzon screens.guanzon
+#:import aguilar screens.aguilar
+#:import heart screens.heart
+
+MainWidget:
+
+    canvas.before :
+        Color :
+            rgb :  chex('bdbdbdb')
+        Rectangle :
+            pos : self.pos
+            size : self.size
+
+    search_bar : search_bar.__self__
+    food_list_scrollview : food_list_scrollview.__self__
+    food_list : food_list.__self__
+    selected_items : selected_items.__self__
+    calculations : calculations.__self__
+    calculation_buttons : calculation_buttons.__self__
+    calculation_slider : calculation_slider.__self__
+
+    spacing : dp(3)
+    padding : dp(1)
+
+    # for displaying foods
+    BoxLayout:
+        orientation : "vertical"
+        size_hint : 0.35 , 1
+        spacing : dp(2)
+
+        TitleBarDesign:
+            text : 'F O O D S'
+            size_hint : 1 , 0.08
+
+        BoxLayout :
+            canvas.before :
+                Color:
+                    rgb : chex('9fa8da')
+                RoundedRectangle:
+                    pos : self.pos
+                    size : self.size
+                    radius : ( 10 , 10 , 10 , 10 )
+
+            size_hint : 1 , 0.92
+            orientation : 'vertical'
+            spacing : dp(2)
+            padding : dp(3)
+
+            MDTextField:
+                id : search_bar
+                hint_text: "Search Food"
+                mode: "round"
+                size_hint : 1 , 0.06
+                font_size : sp(17)
+
+            ScrollView :
+                id : food_list_scrollview
+                size_hint : 1 , 0.94
+                always_overscroll : False
+
+                MDGridLayout :
+                    id : food_list
+                    adaptive_height : True
+                    spacing : dp(8)
+                    cols : 2
+                    padding : dp(6)
+
+    # for displaying calculations
+    BoxLayout:
+        orientation : "vertical"
+        size_hint : 0.65 , 1
+        spacing : dp(2)
+
+        TitleBarDesign:
+            text : 'C A L C U L A T I O N S'
+            size_hint : 1 , 0.08
+
+        # --- Contain the List Of Selected Foods
+        BoxLayout :
+            size_hint : 1 , 0.52
+            orientation : 'vertical'
+
+            TitleBarSelectedFoods:
+                size_hint : 1 , 0.06
+                text : "F  o  o  d  s     S  e  l  e  c  t  e  d"
+
+            ScrollView :
+                size_hint : 1 , 0.94
+                always_overscroll : False
+
+                canvas.before :
+                    Color :
+                        rgb : chex('aed581')
+                    RoundedRectangle :
+                        pos : self.pos
+                        size : self.size
+                        radius : ( 0 , 0 , 10 , 10 )
+
+                SelectedItems :
+                    id : selected_items
+                    adaptive_height : True
+                    spacing : dp(8)
+                    cols : 1
+                    padding : dp(6)
+
+        # --- Contain the Calculation
+        BoxLayout:
+            size_hint : 1 , 0.30
+            padding : dp(3)
+            spacing : dp(2)
+
+            ItemsCalculation:
+                id : calculations
+                size_hint : 0.5 , 1
+
+            BoxLayout :
+                size_hint : 0.5 , 1
+                orientation : 'vertical'
+
+                canvas.before :
+                    Color :
+                        rgb : chex('689f38')
+                    RoundedRectangle :
+                        pos : self.pos
+                        size : self.size
+                        radius : ( 5 , 5 , 0 , 0 )
+
+                ScrollView :
+                    size_hint : 1 , 0.9
+                    do_scroll_x : True
+                    do_scroll_y : False
+                    scroll_x : calculation_slider.value / 100
+                    padding : dp(5)
+                    always_overscroll : False
+
+                    CalculationsButtons:
+                        id : calculation_buttons
+
+                Slider :
+                    id : calculation_slider
+                    size_hint : 1 , 0.1
+                    min : 0
+                    max : 100
+                    cursor_size : ( dp(20) , dp(20) )
+                    value : 0 if len(calculation_buttons.children) < 4 else self.value
+
+
+# ----------------- For Design
+
+<TitleBarDesign@Label>:
+    background_color : 0 , 0 , 0 , 0
+    font_name : 'fontbold'
+    font_size : sp(20)
+
+    canvas.before :
+        Color :
+            rgb : chex('303f9f')
+        RoundedRectangle :
+            pos : self.pos
+            size : self.size
+            radius : ( 0 , 0 , 5 , 5 )
+
+<TitleBarSelectedFoods@Label>:
+    background_color : 0 , 0 , 0 , 0
+    font_name : 'fontlight'
+
+    canvas.before :
+        Color :
+            rgb : chex('689f38')
+        RoundedRectangle :
+            pos : self.pos
+            size : self.size
+            radius : ( 5 , 5 , 0 , 0 )
+
+
+
