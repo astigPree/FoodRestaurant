@@ -95,4 +95,4 @@ python main.py
 
 ## 🎬 Demo Video
  
-![Demo Video Placeholder](/demo.mp4)
+![Demo Video Placeholder](0306.mov)
