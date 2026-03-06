@@ -90,9 +90,11 @@ pip install kivy kivymd
 ```bash
 python main.py
 ```
-
+ 
 --- 
 ## 🎬 Demo Video 
 
-https://github.com/user-attachments/assets/4cd685ca-0bf3-4cae-b4fe-7b1008cbb149
 
+<p align="center" width="100%">
+<video src="https://github.com/user-attachments/assets/9c6e877e-f91e-47a4-b648-bf11fc9fd76d" width="80%" controls></video>
+</p>
