@@ -94,15 +94,6 @@ python main.py
 ---
 
 ## 🎬 Demo Video
-
-
-<video width="800" height="450" controls>
-  <source src="https://github.com/astigPree/FoodRestaurant/blob/main/0306(1).mp4?raw=true" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
- 
- 
-<video width="800" height="450" controls>
-  <source src="https://github.com/astigPree/FoodRestaurant/blob/main/0306(1).mp4?raw=true" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<p align="center" width="100%">
+<video src="https://github.com/astigPree/FoodRestaurant/blob/main/0306(1).mp4" width="80%" controls></video>
+</p>
