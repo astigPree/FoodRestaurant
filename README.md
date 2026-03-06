@@ -95,4 +95,8 @@ python main.py
 
 ## 🎬 Demo Video
  
-![Demo Video Placeholder](0306(1).mp4)
+ 
+<video width="800" height="450" controls>
+  <source src="https://github.com/astigPree/FoodRestaurant/blob/main/0306(1).mp4?raw=true" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
