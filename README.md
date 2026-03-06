@@ -93,4 +93,6 @@ python main.py
 
 --- 
 ## 🎬 Demo Video 
-[![Watch Demo](https://via.placeholder.com/800x450.png?text=Click+to+Watch+Demo)](https://github.com/astigPree/FoodRestaurant/blob/main/0306(1).mp4?raw=true)
+
+https://github.com/user-attachments/assets/4cd685ca-0bf3-4cae-b4fe-7b1008cbb149
+
