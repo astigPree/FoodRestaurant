@@ -91,9 +91,6 @@ pip install kivy kivymd
 python main.py
 ```
 
----
-
-## 🎬 Demo Video
-<p align="center" width="100%">
-<video src="https://github.com/astigPree/FoodRestaurant/blob/main/0306(1).mp4" width="80%" controls></video>
-</p>
+--- 
+## 🎬 Demo Video 
+<iframe width="560" height="315" src="https://github.com/astigPree/FoodRestaurant/blob/main/0306(1).mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
